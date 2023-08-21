@@ -1,5 +1,6 @@
 # Projects
-something something here
+### [project title here](spacecat-max.github.io)
+Project summary and stuff
 
 # Education
 
