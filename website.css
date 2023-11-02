@@ -1,0 +1,44 @@
+body {
+    height: 100%;
+    width: 100%
+    background-color: #324ea8; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, #324ea8, #d134cc);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Garamond, serif;
+    text-align: center;
+    margin: auto;
+  }\
+
+  .h1 {
+    color: whitesmoke;
+    font-size: 5vw;
+  }
+
+  .h2 {
+    color: whitesmoke;
+    font-size: 2vw;
+    padding-left: 10%;
+    text-align: left;
+  }
+
+  .smallertitle {
+    margin: auto;
+    color: whitesmoke;
+    font-size: 2vw;
+  }
+
+  .p {
+    color: whitesmoke;
+    font-size: 2vw;
+    padding-left: 2%;
+    text-align: left;
+  }
+  
+
+  .center {
+    width: 50%;
+    border: 3px solid purple;
+  }
+
