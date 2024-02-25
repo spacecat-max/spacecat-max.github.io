@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+  font-family: "Arial";
+  padding: 2rem;
+  background:#e5e5e5;
+}
+
+input{
+  border:1px solid #fff;
+  background:#fff;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  padding:0.5rem 1.2rem;
+  border-radius:20px;
+  font-size:inherit;
+}
+
+h1{
+  margin-top:2rem;
+}
+
+.wavy {
+  animation-name: wavy;
+  animation-duration: 1.3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+@keyframes wavy {
+      0% { color: red; top: 0px;}
+    16.666% { color: orange; }
+    33.333% { color: rgb(235, 207, 20); }
+    50% { color: green; top: -15px;}
+    66.666% { color: blue; }
+    83.333% { color: rgb(104, 14, 169); }
+    100% { color: rgb(104, 14, 169); top: 0px;}
+}
+
+</style>
+<body>
+  <h1 id="animated">ee</h1>
+  <h1 id="textField"></h1>
+
+</body>
+
+<script>
+
+function updateText(text){
+
+let delay = 200;
+
+	let h1 = document.getElementById("animated");
+
+      h1.innerHTML = text
+        .split("")
+        .map(letter => {
+          console.log(letter);
+          return `<span>` + letter + `</span>`;
+        })
+        .join("");
+
+      Array.from(h1.children).forEach((span, index) => {
+        setTimeout(() => {
+          span.classList.add("wavy");
+        }, index * 70 + delay);
+      });
+
+}
+
+document.getElementById('textField').addEventListener('input', (event)=>{
+	updateText(event.target.value);
+})
+
+updateText("you messed up!");
+
+letters.forEach((letter, index) => {
+    const span = document.createElement('span');
+});
+</script>
+
+</html> 
