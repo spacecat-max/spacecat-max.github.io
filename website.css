@@ -10,7 +10,7 @@
 
 .body {
     height: 100%;
-    width: 100%
+    width: 100%;
     background-color: #324ea8; /* For browsers that do not support gradients */
     background-image: linear-gradient(to bottom right, #324ea8, #d134cc);
     min-height: 100vh;
@@ -165,12 +165,12 @@
   
 
   .h1 {
-    color: whitesmoke;
+    color: #324ea8;
     font-size: 5vw;
   }
 
   .h2 {
-    color: whitesmoke;
+    color: #324ea8;
     font-size: 2vw;
     padding-left: 10%;
     text-align: left;
