@@ -7,24 +7,151 @@
         <link rel="stylesheet" href="website.css">
     </head>
 
-    <body>
-        <ul>
+    <style>
+
+        /* Column container */
+        .container {  
+        display: flex;
+        flex-wrap: wrap;
+        background-color:black;
+        }
+
+        /* Sidebar/left column */
+        .side {
+        flex: 30%;
+        background: linear-gradient(170deg,rgba(42, 68, 155, 1) 0%, rgba(199, 87, 197, 1) 50%, rgba(237, 178, 83, 1) 100%);
+        padding: 20px;
+        border-radius: 25px;
+        }
+
+        /* Main column */
+        .main {
+        flex: 70%;
+        background-color: rgb(0, 0, 0);
+        padding: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 700px) {
+        .container{   
+            flex-direction: column;
+        }
+        }
+
+        .row {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+        }
+
+        /* Create 3 equal columns that sits next to each other */
+        .column {
+        -ms-flex: 33%; /* IE10 */
+        flex: 33%;
+        max-width: 33%;
+        padding: 0 4px;
+        }
+
+        .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+        }
+
+    </style>
+
+    <body style="background-color:black">
+        <!-- <ul>
             <li><a class="active" href="#home">home</a></li>
             <li><a href="#about">about</a></li>
             <li><a href="#education">education</a></li>
             <li><a href="#projects">projects</a></li>
-        </ul>
+        </ul> -->
 
         <!-- Top Navigation Bar -->
         <header>
-            <h1 style="text-align: center">Catherine Renteria</h1>
+            <!-- <h1 style="text-align: center; color:rgb(0, 0, 0);">Catherine Renteria</h1> -->
+            <p style="text-align: center; color:rgb(0, 0, 0);">Electrical Engineer | UC San Diego 2026</p>
         </header>
 
-        <!-- Grid of 3x3 Boxes -->
+        <!-- Content Container -->
+        <div class="container">
+            <div class="side">
+                <h2>About Me</h2>
+                <img src="./assets/profilephoto.jpg" style="width:100%; border-radius: 25px;">
+                <h3>Catherine Renteria</h3>
+                <p>UC San Diego B.S. in Electrical Engineering</p>
+                <p>Electronic Hobbyist, Interest in PCB design</p>
+                <p>View my projects by clicking on the image</p>
+            </div>
+        
+            <div class="main">
+                <h1 style="text-align: center; color:rgb(255, 255, 255);">Projects</h1>
+                <div class="row"> 
+                    <div class="column">
+
+                        <!-- PROJECT #1-->
+                        <div class="grid-item">
+                            <a href="projects/UselessBox/uselessbox.html">
+                            <img src="projects/UselessBox/uselessbox1.jpg">
+                            <div class="text-overlay">Useless Box</div>
+                            </a>
+                        </div>
+
+                    </div> 
+
+                    <div class="column">
+
+                        <!-- PROJECT #2-->
+                        <div class="grid-item">
+                            <img src="projects/PortalBluetoothRadio/portal1.jpg"> 
+                            <div class="text-overlay">Rechargable Bluetooth Portal 2 Radio</div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="column">
+
+                        <!-- PROJECT #3-->
+                        <div class="grid-item">
+                            <img src="projects/LEDBlinky/ledblinky1.png">
+                            <div class="text-overlay">LED Blinky Keychain</div>
+                        </div>
+                        
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Grid of 3x3 Boxes
         <main>
             <div class="grid">
                 <div class="grid-item">
-                    <img src="image.jpg"> <!-- IAMGE HERE! -->
+                    <img src="image.jpg"> IAMGE HERE!
                     <div class="text-overlay">Your Text Here</div>
                 </div> 
                 <div class="grid-item"><a href="#"></a></div>
@@ -33,7 +160,7 @@
                 <div class="grid-item"><a href="#"></a></div>
                 <div class="grid-item"><a href="#"></a></div>
             </div>
-        </main>
+        </main> -->
 
     </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+</head>
+<body>
+
+<h2 style="color:grey;">welcome to a quiet place:</h2>
+
+<div class="row">
+
+  <div class="column">
+  	<p style="color:grey;text-align:center">the comfort spot</p>
+    <input type="image" src="img/closed.png" onMouseOver="this.src='img/comfort.png'" onMouseOut="this.src='img/closed.png'" style="width:100%">
+  </div>
+
+  <div class="column">
+  	<p style="color:grey;text-align:center">the dawn room</p>
+    <input type="image" src="img/closed.png" onMouseOver="this.src='img/dawn.png'" onMouseOut="this.src='img/closed.png'" style="width:100%">
+  </div>
+
+  <div class="column">
+  	<p style="color:grey;text-align:center">the quiet room</p>
+    <input type="image" src="img/closed.png" onMouseOver="this.src='img/quiet.png'" onMouseOut="this.src='img/closed.png'" style="width:100%">
+  </div>
+
+  <div class="column">
+  	<p style="color:grey;text-align:center">the thoughts room</p>
+    <input type="image" href="https://cyrogem.itch.io/the-thoughts-room" src="img/closed.png" onMouseOver="this.src='img/thoughts.jpg'" onMouseOut="this.src='img/closed.png'" style="width:100%">
+  </div>
+
+</div>
+
+</body>
+</html>
